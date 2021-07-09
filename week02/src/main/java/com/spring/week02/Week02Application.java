@@ -34,6 +34,10 @@ public class Week02Application {
                 System.out.println(course.getTutor());
             }
 
+//            Course courseRead = courseRepository.findById(2L).orElseThrow(
+//                    () -> new NullPointerException("아이디가 존재하지 않습니다.")
+//            );
+
             CourseRequestDto requestDto = new CourseRequestDto("웹개발의 봄 Spring", "SpringPro");
             courseService.update(1L, requestDto);
             courseList = courseRepository.findAll();
@@ -44,7 +48,7 @@ public class Week02Application {
                 System.out.println(course.getTutor());
             }
 
-            courseRepository.deleteAll();
+//            courseRepository.deleteAll();
         };
     }
 
