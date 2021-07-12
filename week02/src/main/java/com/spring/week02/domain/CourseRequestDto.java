@@ -1,14 +1,20 @@
 package com.spring.week02.domain;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
+@NoArgsConstructor
 @Setter
 @Getter
-@RequiredArgsConstructor
 
 public class CourseRequestDto {
-    private final String title;
-    private final String tutor;
+    private String title;
+    private String tutor;
+
+    public CourseRequestDto(String title, String tutor) {
+        this.title = title;
+        this.tutor = tutor;
+    }
 }
